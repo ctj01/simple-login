@@ -1,0 +1,30 @@
+﻿@model WebApplicationR.Controllers.UserController
+@{
+    ViewData["Title"] = "Register User";
+}
+<div>
+    <h1>Register User</h1>
+    <form method="post" enctype="multipart/form-data" asp-controller="User" class="form-container">
+        <div>
+            <label for="imputname" class="text-right">Name</label>
+            <input class="form-control col-lg-8" type="text" id="txtname" name="name" />
+        </div>
+        <div>
+            <label for="imputusername" class="text-right">Username</label>
+            <input class="form-control col-lg-8 form" type="text" id="txtusername" name="username" />
+        </div>
+        <div>
+            <label for="imputemail" class="text-right">Email</label>
+            <input class="form-control col-lg-8" type="text" id="txtemail" name="email" />
+        </div>
+        <div>
+            <label for="imputpassword" class="text-right">Password</label>
+            <input class="form-control col-lg-8" type="password" id="txtpassword" name="password" />
+        </div>
+        <div>
+            <button type="submit" id="register" name="register" class="bg-dark text-white btn-dark mt-3">Register</button>
+        </div>
+        <hr />
+        @ViewBag.Name
+    </form>
+</div>

@@ -1,0 +1,24 @@
+﻿@model WebApplicationR.Controllers.UserController
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="align-content-center ml-5 h-100 table-responsive">
+    <h1>Login</h1>
+    <form method="post" enctype="multipart/form-data" asp-controller="User" class="form-container">
+        <div>
+            <label for="imputemail" class="text-right">Email</label>
+            <input class="form-control col-lg-6" type="text" id="txtemail" name="email" />
+        </div>
+        <div>
+            <label for="imputpassword" class="text-right">Password</label>
+            <input class="form-control col-lg-6" type="password" id="txtpassword" name="password" />
+        </div>
+        <div>
+            <button type="submit" id="login" name="login" class="bg-dark text-white btn-dark mt-3">Login</button>
+        </div>
+        <hr />
+        @ViewBag.Name
+    </form>
+</div>
+
